@@ -1,13 +1,133 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  background: #ececec;
+  font-family: "Roboto";
+}
+.container{
+  max-width: 1000px;
+  padding:0 20px;
+  margin:auto;
+}
+#header{
+  background-color: white;
+  padding:20px 0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+#header a{
+  text-decoration: none;
+  display: block;
+  color:blue;
+  padding:10px;
+  font-size: 1em;
+}
+#header .active a{
+  background-color: #ececec;
+}
+#header li{
+  list-style-type: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header nav a:hover,
+#header nav a:focus{
+  background-color: #ececec;
+  color:blueviolet;
+  border-radius: 4px;
+}
+#header .categories{
+  display: flex;
+}
+#header .logo{
+  font-size:2em;
+  padding: 0;
+  color:blueviolet;
+}
+#books-section,
+#book-detail,
+#page-not-found{
+  margin:50px 0;
+}
+.books-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+.section-title{
+  padding: 20px 0;
+}
+#books-section .book{
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background:white;
+}
+#books-section .book-img img{
+  width: 100%;
+  height:200px
+}
+#books-section .book-info{
+  padding: 10px;
+}
+#books-section .book-title{
+  padding-bottom: 10px;
+}
+#books-section .book{
+  padding-bottom: 5px;
+}
+.btn{
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  margin:10px 0;
+  outline: none;
+  opacity: 0.9;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn:hover,.btn:focus{
+  opacity: 1;
+}
+.btn-highlight{
+  background-color: blueviolet;
+  color:white;
+}
+#book-detail .book-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+#book-detail .book-title{
+  padding-bottom: 15px;
+}
+#book-detail .book-author{
+  padding-bottom: 10px;
+}
+#book-detail .book-review-container{
+  display:flex;
+  font-size: 1.2em;
+  justify-content: flex-end;
+}
+#book-detail .book-review-container .book-review{
+  margin-left: 5px;
+}
+#book-detail .book-review-container .book-stars{
+  color:yellow;
+}
+#footer{
+  background-color: blueviolet;
+  color:white;
+  text-align: center;
+  font-size: 1em;
+  padding: 20px;
+  margin-top: auto;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
