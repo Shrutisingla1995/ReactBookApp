@@ -1,8 +1,10 @@
 import React from 'react';
+import Image from './images/833.gif';
+
 let loader = () =>{
     return(
         <div className="loader">
-            <p>is Loading...</p>
+             <img src ={Image} />
         </div>
     )
 }

@@ -3,6 +3,7 @@ import Header from '../components/header/header';
 import Footer from '../footer/footer';
 import BooksSection from '../components/books-section/books-section';
 import axios from 'axios';
+import Loader from '../loader.js';
  class BooksSectionPage  extends Component{
      constructor(props){
          super(props);
@@ -39,7 +40,7 @@ import axios from 'axios';
         return(
             <div>
                <Header/>
-                 {this.state.isLoading ? <p>is loading..</p> :  <BooksSection title={this.props.categoryName} books={this.state.books}/>}
+                 {this.state.isLoading ? <Loader/>  :  <BooksSection title={this.props.categoryName} books={this.state.books}/>}
                <Footer/>
             </div>
          
